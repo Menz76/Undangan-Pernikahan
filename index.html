@@ -3,30 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Undangan Pernikahan Anna & Budi</title>
+  <title>Undangan Rina & Budi</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>Anna & Budi</h1>
-      <p class="tagline">Kami mengundang Anda ke hari istimewa kami</p>
-    </header>
 
-    <section class="info">
-      <h2>Detail Acara</h2>
-      <p><strong>Tanggal:</strong> 20 Juli 2025</p>
-      <p><strong>Waktu:</strong> 10:00 WIB</p>
-      <p><strong>Tempat:</strong> Gedung Serbaguna Mawar, Jakarta</p>
-      <div id="countdown"></div>
-      <a href="https://maps.google.com?q=gedung+serbaguna+mawar+jakarta" target="_blank" class="btn">📍 Lihat Lokasi</a>
-    </section>
+  <section class="cover">
+    <h1>Rina & Budi</h1>
+    <p>20 Juli 2025</p>
+  </section>
 
-    <footer>
-      <p>© 2025 Anna & Budi. Made with ❤️</p>
-    </footer>
-  </div>
+  <section class="countdown">
+    <h2>Hitung Mundur Menuju Hari Bahagia</h2>
+    <div id="timer">Loading...</div>
+  </section>
+
+  <section class="details">
+    <h2>Detail Acara</h2>
+    <p><strong>Akad Nikah:</strong><br>Sabtu, 20 Juli 2025, 08.00 WIB</p>
+    <p><strong>Resepsi:</strong><br>Sabtu, 20 Juli 2025, 11.00 WIB</p>
+    <p><strong>Lokasi:</strong><br>Gedung Graha Candra, Jakarta</p>
+  </section>
+
+  <section class="gallery">
+    <h2>Galeri Cinta</h2>
+    <div class="photos">
+      <img src="img1.jpg" alt="Foto 1">
+      <img src="img2.jpg" alt="Foto 2">
+      <img src="img3.jpg" alt="Foto 3">
+    </div>
+  </section>
+
+  <section class="maps">
+    <h2>Lokasi Acara</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." allowfullscreen></iframe>
+  </section>
+
+  <section class="rsvp">
+    <h2>RSVP</h2>
+    <form id="rsvpForm">
+      <input type="text" placeholder="Nama Anda" required />
+      <select required>
+        <option value="">Konfirmasi Kehadiran</option>
+        <option value="hadir">Hadir</option>
+        <option value="tidak">Tidak Hadir</option>
+      </select>
+      <button type="submit">Kirim</button>
+    </form>
+    <div id="rsvpMessage"></div>
+  </section>
+
+  <audio autoplay loop hidden>
+    <source src="lagu.mp3" type="audio/mpeg">
+  </audio>
+
   <script src="script.js"></script>
 </body>
 </html>
