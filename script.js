@@ -1,22 +1,27 @@
-const eventDate = new Date("2025-07-20T10:00:00").getTime();
+// Countdown
+const eventDate = new Date("2025-07-20T08:00:00").getTime();
+const timerEl = document.getElementById("timer");
 
-function updateCountdown() {
+setInterval(() => {
   const now = new Date().getTime();
   const distance = eventDate - now;
 
-  if (distance < 0) {
-    document.getElementById("countdown").innerText = "Acara sedang berlangsung!";
+  if (distance <= 0) {
+    timerEl.innerHTML = "Acara sedang berlangsung!";
     return;
   }
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((distance / (1000 * 60)) % 60);
+  const seconds = Math.floor((distance / 1000) % 60);
 
-  document.getElementById("countdown").innerText =
-    `Menuju hari bahagia: ${days}h ${hours}j ${minutes}m ${seconds}d`;
-}
+  timerEl.innerHTML = `${days} hari ${hours} jam ${minutes} menit ${seconds} detik`;
+}, 1000);
 
-setInterval(updateCountdown, 1000);
-updateCountdown();
+// RSVP (dummy handling)
+document.getElementById("rsvpForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  document.getElementById("rsvpMessage").innerText = "Terima kasih atas konfirmasinya!";
+  this.reset();
+});
