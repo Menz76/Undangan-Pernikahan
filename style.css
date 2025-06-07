@@ -1,40 +1,55 @@
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom right, #ffe6f0, #ffffff);
-  text-align: center;
+  margin: 0;
+  background: #fffdfc;
   color: #333;
 }
-
-.container {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 30px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+section {
+  padding: 30px 20px;
+  text-align: center;
 }
-
-h1 {
-  color: #c2185b;
-  margin-bottom: 10px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  background: #c2185b;
+.cover {
+  background: linear-gradient(135deg, #ffe2e2, #ffc8dd);
   color: #fff;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 1em;
 }
-
-#countdown {
-  margin-top: 20px;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #c2185b;
+.countdown #timer {
+  font-size: 2em;
+  margin-top: 15px;
+}
+.photos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.photos img {
+  width: 30%;
+  border-radius: 10px;
+}
+.rsvp form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.rsvp input, .rsvp select {
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+}
+button {
+  background: #ff6b81;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover {
+  background: #ff4757;
+}
+iframe {
+  width: 90%;
+  height: 300px;
+  border-radius: 12px;
 }
